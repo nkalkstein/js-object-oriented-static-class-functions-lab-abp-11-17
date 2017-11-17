@@ -1,22 +1,22 @@
 'use strict';
 
 class Question {
-  constructor(question, id){
-      this.constructor._All = [];
+  constructor(content){
+      this.content = content;
       this.save;
-  }
-
-  static All() {
-    return this._All;
   }
 
   save() {
   this.constructor._All.push(this)
 }
 
+  static All() {
+    return this._All;
+  }
+
   static Find(id){
-    this.All().filter(function(question){
-    return question.question === id;
-    })
+    return this.All()[id - 1] 
   }
 }
+
+Question._All = []
