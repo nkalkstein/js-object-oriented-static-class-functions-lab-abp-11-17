@@ -7,7 +7,7 @@ class Question {
   }
 
   save() {
-  this.constructor._All.push(this)
+    this.constructor._All.push(this)
 }
 
   static All() {
@@ -15,7 +15,7 @@ class Question {
   }
 
   static Find(id){
-    return this.All()[id - 1] 
+    return this.All()[id - 1]
   }
 }
 
